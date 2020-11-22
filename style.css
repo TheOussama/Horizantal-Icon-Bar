@@ -1,0 +1,98 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #fad46e;
+}
+ul {
+  display: flex;
+  justify-content: center;
+}
+ul li {
+  list-style: none;
+  background-color: #dfe3ee;
+  padding: 20px 20px;
+  height: 60px;
+  width:60px;
+  position: relative;
+  top: -60px;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.3s ease;
+  transition: width 0.9s ease;
+  cursor: pointer;
+}
+ul li:hover {
+  background-color: #8b9dc3;
+}
+ul .fas {
+  color:#3b5998;
+  width: 20px;
+}
+
+ul li:nth-child(1) {
+  animation: slideIn 0.3s linear 1 forwards;
+}
+
+ul li:nth-child(2) {
+  animation: slideIn 0.3s linear 1 forwards 0.3s;
+}
+ul li:nth-child(3) {
+  animation: slideIn 0.3s linear 1 forwards 0.6s;
+}
+
+ul li:nth-child(4) {
+  animation: slideIn 0.3s linear 1 forwards 0.9s;
+}
+ul li:nth-child(5) {
+  animation: slideIn 0.3s linear 1 forwards 1.2s;
+}
+
+ul li:nth-child(6) {
+  animation: slideIn 0.3s linear 1 forwards 1.5s;
+  transition: width 0.9 ease;
+}
+ul li:nth-child(6):hover {
+  width: 360px;
+  justify-content: flex-end;
+
+}
+
+
+
+li input {
+  box-sizing: border-box;
+  color: white;
+  font-size: 24px;
+  background-color: #3b5998;
+
+   position: absolute;
+   left: 0px;
+  width: 0px;
+  height: 50px;
+  border: 0px;
+  transition: width 0.8s ease;
+}
+li input:focus {
+  outline: none;
+}
+li:hover input {
+  width: 300px;
+}
+
+
+
+
+
+
+@keyframes slideIn{
+  from {
+    top:-60px;
+  }
+  to {
+    top:0;
+  }
+}
